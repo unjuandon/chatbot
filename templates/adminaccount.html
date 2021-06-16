@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- CSS Boostrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="/static/css/styles.css">
+
+
+    <title>MQA</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" onclick="route('main')"><img src="/static/img/logomqa.png" height="40"
+                    alt="logo MQA"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
+                aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarText">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+                </ul>
+                <span class="navbar-text">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li><img src="/static/img/user.png" alt="user"></li>
+                        <li class="nav-item"><a class="nav-link active" href="#" onclick="route('signin')">Login/Cerrar
+                                Sesión</a></li>
+                    </ul>
+
+                </span>
+            </div>
+        </div>
+    </nav>
+    <div class="sidenav">
+        <div class="container-fluid mt-2">
+            <div class="row">
+                <div class="col">
+                    <div class="accordion" id="accordionExample">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingOne">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#consultores" aria-expanded="false"
+                                    aria-controls="flush-collapseOne">
+                                    Consultores
+                                </button>
+                            </h2>
+                            <div id="consultores" class="accordion-collapse collapse" aria-labelledby="headingOne"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                        <li>Lista de consultores</li>
+                                        <li>Añadir consultor</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingOne">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#tareas" aria-expanded="false" aria-controls="flush-collapseOne">
+                                    Tickets
+                                </button>
+                            </h2>
+                            <div id="tareas" class="accordion-collapse collapse" aria-labelledby="headingOne"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                        <li>Ver tickets</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid container-sidenav">
+        <div class="row p-5">
+            <div class="col card-login">
+                <h2>Consultores</h2>
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Nombre</th>
+                            <th scope="col">Apellido</th>
+                            <th scope="col">Estado</th>
+                            <th scope="col">Proyecto</th>
+                            <th></th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>Jorge</td>
+                            <td>Laverde</td>
+                            <td>Activo</td>
+                            <td>VTEX</td>
+                            <td><button class="btn btn-primary">Editar</button></td>
+                            <td><button class="btn btn-danger">Eliminar</button></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>Juan</td>
+                            <td>Cardona</td>
+                            <td>Activo</td>
+                            <td>Backend</td>
+                            <td><button class="btn btn-primary">Editar</button></td>
+                            <td><button class="btn btn-danger">Eliminar</button></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>Angie</td>
+                            <td>Gordillo</td>
+                            <td>Inactivo</td>
+                            <td>Chatbot</td>
+                            <td><button class="btn btn-primary">Editar</button></td>
+                            <td><button class="btn btn-danger">Eliminar</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+
+            </div>
+            <div class="col-1">
+
+
+            </div>
+            <div class="col card-login">
+                <h2>Nuevo Consultor</h2>
+
+                <div class="row">
+                    <div class="col">
+                        <label for="">Nombre</label>
+                        <input type="text" name="" class="form-control">
+                    </div>
+                    <div class="col">
+                        <label for="">Apellido</label>
+                        <input type="text" name="" class="form-control">
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col">
+                        <label for=""># de documento</label>
+                        <input type="text" name="" class="form-control">
+                    </div>
+                    <div class="col">
+                        <label for="">Proyecto</label>
+                        <input type="text" name="" class="form-control">
+                    </div>
+                </div>
+                <br>
+                <input type="button" value="Crear" class="btn btn-success">
+                <input type="button" value="Limpiar"  class="btn btn-primary">
+
+            </div>
+
+        </div>
+        <div class="row p-5">
+            <div class="col card-login">
+                <h2>Tickets</h2>
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th scope="col">#Ticket</th>
+                            <th scope="col">Asunto</th>
+                            <th scope="col">Fecha</th>
+                            <th scope="col">Estado</th>
+                            <th scope="col">Responsable</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">123123123</th>
+                            <td>Error factura</td>
+                            <td>25/05/2021</td>
+                            <td>Abierto</td>
+                            <td>Jorge</td>
+                            <td><button class="btn btn-primary">Editar</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- JS Boostrap -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js"
+        integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous">
+    </script>
+    <script src="/public/js/route.js"></script>
+</body>
+
+</html>
